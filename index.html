@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            box-sizing: border-box;
+            margin: 0%;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+            background-image: url(images/animals/bucography-LwWPNOCiK-g-unsplash.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #quadPane {
+            width: 30%;
+            padding: 25px;
+            box-sizing: border-box;
+            background-color: white;
+        }
+        #solve {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 18px;
+            outline: none;
+            border: none;
+            background-color: black;
+            color: white;
+        }
+        #upper {
+            display: grid;
+            grid-template-columns: 20% 20% 20% 20% 20%;
+            grid-template-rows: 100%;
+            grid-auto-flow: column;
+            margin: 10px 0px;
+        }
+        #upper > span {
+            font-size: 15px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color: black;
+            color: white;
+            padding: 5px 10px;
+        }
+        #upper > input, #lower > input {
+            outline: none;
+            padding: 10px 5px;
+            border: none;
+            font-size: 20px;
+            text-align: right;
+            border-bottom: 1px solid black;
+            color: rgb(177, 28, 177);
+        }
+        #lower {
+            display: grid;
+            grid-template-columns: 40% 40%;
+            grid-template-rows: 100%;
+            grid-auto-flow: column;
+            justify-content: space-between;
+            margin: 20px 0px;
+        }
+
+        /* for responsiveness */
+        @media only screen and ( max-width:428px ) and ( min-width:0px ){
+            #quadPane {
+                width: 95%;
+            }
+        }
+
+        /* for medium tablets */
+        @media only screen and ( max-width:768px ) and ( min-width:429px ){
+            #quadPane {
+                width: 85%;
+            }
+        }
+
+        /* for large tablets and small-sized laptops */
+        @media only screen and ( max-width:1024px ) and ( min-width:769px ){
+            #quadPane {
+                width: 70%;
+            }
+        }
+
+        /* for large laptops */
+        @media only screen and ( max-width:2000px ) and ( min-width:1025px ){
+            /* dummy css */
+        }
+
+        /* for 2k screens and more */
+        @media only screen and ( min-width:2001px ) {
+            /* creative css */
+        }
+    </style>
+    <base href="https://drakejoshua.github.io/">
+</head>
+<body>
+    <div id="quadPane">
+
+        <div id="upper">
+            <input type="text" id="aInput">
+            <span>x <sup>2</sup></span>
+            <input type="text" id="bInput">
+            <span>x</span>
+            <input type="text" id="cInput">
+        </div>
+        <button id="solve" onclick="retrieveValues()"> Solve </button>
+        <div id="lower">
+            <input type="text" id="x1" disabled>
+            <input type="text" id="x2" disabled>
+        </div>
+    </div>
+    <script src="quadratic-equation-solver---pjs/script.js"></script>
+</body>
+</html>
